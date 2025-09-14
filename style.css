@@ -1,46 +1,83 @@
-*{
-    margin: 0; 
-    padding: 0;
-    box-sizing: 0;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: rgb(227, 162, 255);
-    color: #333;
-    padding: 20px;
+/* Body setup */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;
 }
 
-section {
-  background: white;
+/* Two-panel layout */
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/* Left panel */
+.left-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.left-panel img {
+  max-width: 150%;
+}
+
+/* Right panel */
+.right-panel {
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  flex: 2;
   padding: 30px;
-  margin: 20px auto;
-  border-radius: 15px;
-  max-width: 800px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow-y: auto;
 }
 
-h1, h2 {
-  margin-bottom: 15px;
-  color: #444;
+.right-panel {
+  flex: 2;
+  padding: 30px;
+  display: flex;                /* make it a flexbox */
+  flex-direction: column;       /* stack nav + sections vertically */
+  align-items: center;          /* center horizontally */
+  justify-content: flex-start;  /* align content to top (use center if you want vertical centering too) */
+  overflow-y: auto;
 }
 
-ul {
-  list-style: none;
+/* Navigation buttons */
+nav {
+  margin-bottom: 20px;
 }
 
-li {
-  margin: 10px 0;
-}
-
-/* Links */
-a {
-  color: #6a0dad;
-  text-decoration: none;
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background: red;
+  color: white;
   font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-a:hover {
-  text-decoration: underline;
+button:hover {
+  background: darkred;
+}
+
+/* Section headings */
+h1 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+p, li {
+  color: white;
 }

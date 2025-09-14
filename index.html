@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-widthm inital scale = 1.0" >
-          <title>Emaan's portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <section id="details">
-        <h1>Hey, I am Emaan Dhillon 👋</h1>
-        <p>A beginner web developer and a student(BE computer engineering). Open to explore and learn new things</p>
-    </section>
-    <section id="stack">
-    <h2>My Tech Stack 💻</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>C / C++</li>
-    </ul>
-  </section>
-  <section id="projects">
-    <h2>Projects 🚀</h2>
-    <ul>
-      <li><a href="https://emaandhillon.github.io/vibe-sa" target="_blank">🎵 Vibe-sa (Lofi Music Website)</a></li>
-      <li><a href="https://scooplane.shop" target="_blank">🛒 Scooplane.shop (E-commerce)</a></li>
-    </ul>
-</section>
-<section id="socials">
-    <h2>Github 📍</h2>
-    <ul>
-        <li><a href="https://github.com/EmaanDhillon/">click here</a></li>
-    </ul>
-</section>
-        
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emaan's portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Container wrapping both panels -->
+  <div class="container">
+    
+    <!-- Left panel -->
+    <div class="left-panel">
+      <img src="4Cb2.gif" alt="My photo">
+    </div>
+
+    <!-- Right panel -->
+    <div class="right-panel">
+      <nav>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('stack')">Tech Stack</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('socials')">Socials</button>
+      </nav>
+
+      <!-- Sections go here inside right-panel -->
+      <div id="about" class="section">
+        <h1>About Me</h1>
+        <p> Hello, I’m <b>Emaan Dhillon</b>, a curious learner and an aspiring developer passionate about 
+    building clean, functional, and meaningful digital experiences. I enjoy working with 
+    modern web technologies and exploring creative ways to merge design with code.  
+    Over the past few years, I’ve experimented with projects ranging from small personal 
+    websites to complete applications, which has helped me understand both problem-solving 
+    and user-focused design. Beyond coding, I love learning new skills, thinking about 
+    products, and collaborating with people who share a vision for making things better.  
+    My goal is simple: keep improving, keep building.</p>
+      </div>
+
+      <div id="stack" class="section" style="display: none;">
+        <h1>My Tech Stack</h1>
+        <ul>
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>C / C++</li>
+        </ul>
+      </div>
+
+      <div id="projects" class="section" style="display: none;">
+        <h1>Projects</h1>
+        <ul>
+          <li>🎵 Vibe-sa (Lofi Music Website)</li>
+          <li>🛒 Scooplane.shop (E-commerce)</li>
+        </ul>
+      </div>
+
+      <div id="socials" class="section" style="display: none;">
+        <h1>Socials</h1>
+        <p>📧 emaaan.dhillon@gmail.com</p>
+        <p>🔗 github.com/emaandhillon</p>
+      </div>
+    </div> <!-- end right-panel -->
+
+  </div> <!-- end container -->
+
+  <script src="script.js"></script>
+</body>
 </html>
