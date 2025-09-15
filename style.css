@@ -7,7 +7,8 @@
 
 /* Body setup */
 body {
-  background-color: black;
+  background: url("stars.png") no-repeat center center fixed;
+  background-size: cover;
   color: white;
   font-family: Arial, sans-serif;
   height: 100vh;
@@ -70,8 +71,16 @@ button {
 
 button:hover {
   background: darkred;
+  transform: scale(1.15); 
 }
 
+nav button.active {
+  background: red;
+  color: black;
+  font-weight: bold;
+}
+
+ 
 /* Section headings */
 h1 {
   color: red;
@@ -99,4 +108,40 @@ a:hover {
 /* Optional: Style for visited links */
 a:visited {
   color: #990000; /* Even darker red for visited links */
+}
+
+ div img{ 
+  align-items: center;
+ }
+
+ .section img {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.left-panel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+h1 {
+  color: red;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+}
+
+button {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out;
+}
+
+.section {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

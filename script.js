@@ -5,4 +5,12 @@ function showSection(sectionId) {
 
   // Show the clicked section
   document.getElementById(sectionId).style.display = "block";
+
+  document.querySelectorAll('nav button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  // Add "active" to the clicked button
+  event.target.classList.add('active');
 }
+
