@@ -81,3 +81,22 @@ h1 {
 p, li {
   color: white;
 }
+
+/* Default styles for all <a> tags */
+a {
+  color: #ff3333; /* Bright red to match buttons and headings */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for <a> tags */
+a:hover {
+  color: #cc0000; /* Darker red on hover */
+  text-decoration: underline;
+}
+
+/* Optional: Style for visited links */
+a:visited {
+  color: #990000; /* Even darker red for visited links */
+}
